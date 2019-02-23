@@ -29,10 +29,8 @@ public class Calc {
                 return;
         }
 
-        System.out.println(d + operation + d2 + " = " + res);
+        System.out.println(d + operation + d2 + " = " + res + "\n");
     }
-
-
 
     private static String inputOperations() {
         String oper = null;
@@ -46,7 +44,7 @@ public class Calc {
                     break;
                 } else System.out.println("Вы ввели не допустимый символ операции, повторите ввод");
             } else {
-                System.out.println("Вы ввели: " + oper);
+                System.out.println("Вы выбрали: " + oper);
                 break;
             }
         }

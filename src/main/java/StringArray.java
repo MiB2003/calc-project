@@ -13,7 +13,7 @@ public class StringArray {
             stringAr[i]= oper;
              }
             int maxString = findMinMax(stringAr);
-        System.out.println("Самое длинное слово в массиве: " + stringAr[maxString]);
+        System.out.println("Самое длинное слово в массиве: " + stringAr[maxString]+ "\n");
         }
 
     private static int findMinMax(String[] array) {

@@ -11,9 +11,12 @@ import java.util.Scanner;
 public class Base  {
 
     public static void main(String[] args) {
-        int result = startMenu();
+        int result=0;
+        while (result!=3){
+        result = startMenu();
         if (result == 1) Calc.calc();
         if (result == 2) StringArray.stringArray();
+        }
     }
 
     public static int startMenu() {
