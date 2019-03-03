@@ -1,13 +1,17 @@
+package task3;
+
 import java.util.Scanner;
+
+import static task3.InputData.inputNumber;
 
 public class Calc {
     static public void calc() {
         Double d;
         Double d2;
 
-        d = Base.inputNumber("1", true);
+        d = inputNumber("1", true);
         if (d == null) return;
-        d2 = Base.inputNumber("2", true);
+        d2 = inputNumber("2", true);
         if (d2 == null) return;
 
         Double res = null;
@@ -29,7 +33,8 @@ public class Calc {
                 return;
         }
 
-        System.out.println(d + operation + d2 + " = " + res + "\n");
+        System.out.printf("%.4f  %s %.4f  = %.4f %n", d, operation, d2, res);
+
     }
 
     private static String inputOperations() {

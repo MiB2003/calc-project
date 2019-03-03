@@ -1,23 +1,27 @@
+package task3;
+
 import java.util.Scanner;
+
+import static task3.InputData.inputNumber;
 
 public class StringArray {
     static public void stringArray() {
-        int size = (Base.inputNumber(null, false)).intValue();
+        int size = (inputNumber(null, false)).intValue();
         String[] stringAr = new String[size];
         String oper = null;
         for (int i = 0; i < size; i++) {
             System.out.println("Введите "+ (1+i) +" слово из "+ size);
             Scanner sc = new Scanner(System.in); // создаём объект класса Scanner
             oper = sc.nextLine();
-           // System.out.println("Вы ввели: " + oper);
+            // System.out.println("Вы ввели: " + oper);
             stringAr[i]= oper;
-             }
-            int maxString = findMinMax(stringAr);
-        System.out.println("Самое длинное слово в массиве: " + stringAr[maxString]+ "\n");
         }
+        int maxString = findMinMax(stringAr);
+        System.out.println("Самое длинное слово в массиве: " + stringAr[maxString]+ "\n");
+    }
 
     private static int findMinMax(String[] array) {
-       int indexOfMax = 0;
+        int indexOfMax = 0;
         int indexOfMin = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i].length() > array[indexOfMax].length()) {
@@ -26,7 +30,7 @@ public class StringArray {
                 indexOfMin = i;
             }
         }
-       return indexOfMax;
+        return indexOfMax;
     }
 
 }
