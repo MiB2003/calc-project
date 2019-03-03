@@ -7,6 +7,14 @@ import java.util.Scanner;
  */
 
 public class InputData {
+    /**
+     * Returns the number entered by the user
+     *
+     * @param n      number of input
+     * @param isCalc mode of operation (true - a calculator, false- others.)
+     * @return returns the number entered by the user
+     * @author Bykov V.V.
+     */
     public static Double inputNumber(String n, boolean isCalc) {
         Double d = null;
         for (int i = 1; i < 4; i++) {

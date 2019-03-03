@@ -7,11 +7,18 @@ import java.util.Scanner;
  */
 
 public class InputData {
-    public static Double inputNumber(String n, boolean isCalc) {
+
+    /**
+     * Returns the number entered by the user
+     *
+     * @param n number of input
+     * @return returns the number entered by the user
+     * @author Bykov V.V.
+     */
+    public static Double inputNumber(String n) {
         Double d = null;
         for (int i = 1; i < 4; i++) {
-            if (isCalc) System.out.print("Введите " + n + "-e число: ");
-            else System.out.print("Введите размер массива: ");
+            System.out.print("Введите " + n + "-e число: ");
             Scanner sc = new Scanner(System.in); // создаём объект класса Scanner
             if (!sc.hasNextDouble()) { // возвращает истинну если с потока ввода можно считать число
                 if (i == 3) {

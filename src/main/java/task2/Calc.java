@@ -4,14 +4,21 @@ import java.util.Scanner;
 
 import static task2.InputData.inputNumber;
 
+
 public class Calc {
+
+    /**
+     * Performing math operations
+     *
+     * @author Bykov V.V.
+     */
     static public void calc() {
         Double d;
         Double d2;
 
-        d = inputNumber("1", true);
+        d = inputNumber("1");
         if (d == null) return;
-        d2 = inputNumber("2", true);
+        d2 = inputNumber("2");
         if (d2 == null) return;
 
         Double res = null;
@@ -35,6 +42,12 @@ public class Calc {
         System.out.printf("%.4f  %s %.4f  = %.4f %n", d, operation, d2, res);
     }
 
+    /**
+     * Selection of the required mathematical operation
+     *
+     * @author Bykov V.V.
+     * @return sign of the required operation
+     * */
     private static String inputOperations() {
         String oper = null;
         for (int i = 1; i < 4; i++) {
