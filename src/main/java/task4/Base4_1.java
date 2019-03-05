@@ -35,7 +35,7 @@ public class Base4_1 {
         }
         System.out.println("Массив заполнен.");
         System.out.println("Максимальное отрицательное число = " + maxMinusValue + ", встречается  " + maxMinusCount + " раз(а)");
-        System.out.println("Минимльное положительное число = " + minPlusValue + ", встречается  " + minPlusCount + " раз(а)");
+        System.out.println("Минимальное положительное число = " + minPlusValue + ", встречается  " + minPlusCount + " раз(а)");
         System.out.print("Исходный массив: ");
         System.out.println(Arrays.toString(array));
 
