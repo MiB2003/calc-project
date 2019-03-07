@@ -6,6 +6,7 @@ package task4.part4_2;
 
 public abstract class Sweet {
     String name;
+    String type;
     double price = -1;
     double wight = 0;
 
@@ -31,7 +32,12 @@ public abstract class Sweet {
         return price;
     }
 
+    public double getWight() {
+        return wight;
+    }
+
     public abstract String description();
 
+    public abstract String type();
 
 }

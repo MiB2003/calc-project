@@ -12,8 +12,14 @@ public class App {
         box.addItem(new Cookie("Мария", 170, 700));
         box.addItem(new Candy("Раковая шейка", 200, 450));
         box.addItem(new Chocolate("Машенька", 150, 100));
-        box.ptintItems();
-        box.ptintTotal();
+
+//        // Вариант вывода отчета без форматирования
+//        box.ptintItems();
+//        box.ptintTotal();
+
+        // Вариант вывода отчета c форматированием
+        box.ptintItemsFormat();
+        box.ptintTotalFormat();
     }
 
 

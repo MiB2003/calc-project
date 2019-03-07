@@ -14,7 +14,10 @@ public class Cookie extends Sweet {
         super(name, price, wight);
     }
 
-    @Override
+    public String type() {
+        return "Печенье";
+    }
+
     public String description() {
         return "Печенье: " + name + ", весом: " + wight + "гр. по цене: " + price + " руб.";
     }

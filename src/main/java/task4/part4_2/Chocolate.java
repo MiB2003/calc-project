@@ -14,7 +14,10 @@ public class Chocolate extends Sweet {
         super(name, price, wight);
     }
 
-    @Override
+    public String type() {
+        return "Шоколад";
+    }
+
     public String description() {
         return "Шоколад: " + name + ", весом: " + wight + "гр. по цене: " + price + " руб.";
     }

@@ -21,6 +21,26 @@ public class GiftBox {
         fullWight += sweet.wight;
     }
 
+    public void ptintItemsFormat() {
+        StringBuilder result = new StringBuilder("");
+        result.append("\nПЕРЕЧЕНЬ СЛАДОСТЕЙ В НАБОРЕ:\n");
+        result.append("=====+==================+==============================+=========+========\n")
+                .append(String.format(" %-3s| %-16s | %-28s |%-7s| %-35s\n", "№", "Вид сладости", "Наименование", "Цена,руб.", "Вес,гр."))
+                .append("=====+==================+==============================+=========+========\n");
+        for (int i = 0; i < nSweets.length; i++) {
+            result.append(String.format(" %-3s | %-16s | %-28s | %-7s | %-35s\n", i + 1, nSweets[i].type(), nSweets[i].getName(), nSweets[i].getPrice(), nSweets[i].getWight()));
+        }
+        result.append("=====+==================+==============================+=========+========\n");
+        System.out.print(result);
+    }
+
+    public void ptintTotalFormat() {
+        StringBuilder result = new StringBuilder("");
+        result.append(String.format("%54s | %-7s | %-35s\n", "Общая стоимость и вес набора ", getFullPrice(), getFullWight()))
+                .append("=======================================================+=========+========\n");
+        System.out.println(result);
+    }
+
     public void ptintItems() {
         System.out.println("Подарок содержит:");
         System.out.println("======================================================");
