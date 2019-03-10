@@ -32,10 +32,11 @@ public class Base6 {
             System.out.println(statistics);
             System.out.println("Всего в списке слов: " + worldCount);
             System.out.print("Чаще всего, " + maxNumberWord + " раз(а) из слов встречается: ");
+            // поиск всех слов с максимальным значением повторения
             Set<Map.Entry<String, Integer>> entrySet = statistics.entrySet();
-            for (Map.Entry<String, Integer> pair : entrySet) {
-                if (maxNumberWord.equals(pair.getValue())) {
-                    System.out.print("[" + pair.getKey() + "] ");// нашли наше значение и возвращаем  ключ
+            for (Map.Entry<String, Integer> findValue : entrySet) {
+                if (maxNumberWord.equals(findValue.getValue())) {
+                    System.out.print("[" + findValue.getKey() + "] ");// нашли наше значение и возвращаем  ключ
                 }
             }
         } catch (FileNotFoundException e) {
