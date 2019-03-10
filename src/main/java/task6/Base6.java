@@ -31,7 +31,7 @@ public class Base6 {
             }
             System.out.println(statistics);
             System.out.println("Всего в списке слов: " + worldCount);
-            System.out.print("Чаще всего, " + maxNumberWord + " раз(а) встречается слово(ва): ");
+            System.out.print("Чаще всего, " + maxNumberWord + " раз(а) из слов встречается: ");
             Set<Map.Entry<String, Integer>> entrySet = statistics.entrySet();
             for (Map.Entry<String, Integer> pair : entrySet) {
                 if (maxNumberWord.equals(pair.getValue())) {
