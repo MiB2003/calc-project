@@ -10,7 +10,9 @@ import java.util.*;
 
 public class Base6 {
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\User\\IdeaProjects\\calc\\src\\main\\resources\\testText.txt");
+       // File file = new File("C:\\Users\\vbykov\\IdeaProjects\\calc-project2\\src\\main\\resources\\testText.txt");
+        ClassLoader loader = Base6.class.getClassLoader();
+        File file = new File(loader.getResource("testText.txt").getFile()); // Получение доступа к файлу по относиительному пути
         Scanner scanner = null;
         int worldCount = 0;
         Integer maxNumberWord = 0;
