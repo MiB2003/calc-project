@@ -3,6 +3,7 @@ package task5;
 import java.util.Scanner;
 
 import static task5.InputData.inputNumber;
+import static task5.InputData.inputOperations;
 
 public class Calc {
 
@@ -38,25 +39,5 @@ public class Calc {
         }
 
         System.out.printf("%.4f  %s %.4f  = %.4f %n", d, operation, d2, res);
-
-    }
-
-    private static String inputOperations() {
-        String oper = null;
-        for (int i = 1; i < 4; i++) {
-            System.out.println("Введите знак требуемой операции: + (сложение), - (вычетание), * (умножение), / (деление)");
-            Scanner sc = new Scanner(System.in); // создаём объект класса Scanner
-            oper = sc.nextLine();
-            if (!(oper.equals("+") || oper.equals("-") || oper.equals("/") || oper.equals("*"))) {
-                if (i == 3) {
-                    System.out.print("Превышено допустимое количетво попыток ввода...");
-                    break;
-                } else System.out.println("Вы ввели не допустимый символ операции, повторите ввод");
-            } else {
-                System.out.println("Вы выбрали: " + oper);
-                break;
-            }
-        }
-        return oper;
     }
 }
