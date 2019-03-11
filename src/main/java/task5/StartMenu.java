@@ -17,7 +17,7 @@ public class StartMenu {
         while (true) {
             try {
                 int result = Integer.valueOf(reader.readLine());
-                if (result == 1 || result == 2 || result == 3)
+                if (result == 1 || result == 2 )
                     return result;
                 else throw new IOException();
             } catch (IOException | NumberFormatException ex) {
