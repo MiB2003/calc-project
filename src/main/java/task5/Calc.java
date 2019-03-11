@@ -5,7 +5,11 @@ import java.util.Scanner;
 import static task5.InputData.inputNumber;
 
 public class Calc {
+
+    static MathemImplementacion mathemImplementacion = new MathemImplementacion();
+
     static public void calc() {
+
         Double d;
         Double d2;
 
@@ -18,16 +22,16 @@ public class Calc {
         String operation = inputOperations();
         switch (operation) {
             case "+":
-                res = d + d2;
+                res = mathemImplementacion.plus(d, d2);
                 break;
             case "-":
-                res = d - d2;
+                res = mathemImplementacion.minus(d, d2);
                 break;
             case "/":
-                res = d / d2;
+                res = mathemImplementacion.division(d, d2);
                 break;
             case "*":
-                res = d * d2;
+                res = mathemImplementacion.multipl(d, d2);
                 break;
             default:
                 return;
