@@ -10,20 +10,21 @@ import java.io.InputStreamReader;
 
 public class StartMenu {
     public static int startMenu() {
+        int result;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Здравствуйте! Сделайте выбор:\n" +
                 "1)Запустить Калькулятор.\n" +
                 "2)Выход");
         while (true) {
             try {
-                int result = Integer.valueOf(reader.readLine());
+                result = Integer.valueOf(reader.readLine());
                 if (result == 1 || result == 2 )
                     return result;
                 else throw new IOException();
             } catch (IOException | NumberFormatException ex) {
-                System.out.println("Ошибка выбора операции. Сделайте выбор и введите номер операции!");
-                System.out.println("1)Запустить Калькулятор.\n" +
-                        "2)Выход");
+                System.out.println("Ошибка выбора операции.");
+               result = -1;
+               return  result;
             }
         }
     }

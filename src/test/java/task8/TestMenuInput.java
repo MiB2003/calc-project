@@ -22,14 +22,25 @@ public class TestMenuInput {
 
     @Test
     public void testMenuInput() {
-        systemInMock.provideLines("1");
+        systemInMock.provideLines("1"); // Правильный пункт меню
         int menu = startMenu();
         Assert.assertTrue("Полученное значение не равно 1", menu == 1);
 
-        systemInMock.provideLines("2");
+        systemInMock.provideLines("2"); // Правильный пункт меню
         menu = startMenu();
         Assert.assertTrue("Полученное значение не равно 2", menu == 2);
 
+        systemInMock.provideLines("3");  // Не правильный пункт меню
+        menu = startMenu();
+        Assert.assertTrue("Полученное значение не равно 3", menu == -1);
+
+        systemInMock.provideLines("Не правильное число"); // Не правильный пункт меню
+        menu = startMenu();
+        Assert.assertTrue("Полученное значение не равно -1", menu == -1);
+
+        systemInMock.provideLines("+_+."); // Не правильный пункт меню
+        menu = startMenu();
+        Assert.assertTrue("Полученное значение не равно -1", menu == -1);
     }
 
 
