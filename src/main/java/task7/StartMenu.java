@@ -12,9 +12,9 @@ public class StartMenu {
     public static int startMenu() {
         int result;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Здравствуйте! Сделайте выбор:\n" +
-                "1)Запустить Калькулятор.\n" +
-                "2)Выход");
+        System.out.println("Здравствуйте! Сделайте выбор, нажмите:\n" +
+                "1 -Запустить Калькулятор.\n" +
+                "2 -Выход");
         while (true) {
             try {
                 result = Integer.valueOf(reader.readLine());
